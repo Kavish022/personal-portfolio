@@ -40,13 +40,17 @@ export function About() {
               ease: "outExpo",
             });
 
-            // Animate number counters
-            const numericalValues = [1, 28, 20, 1420];
-            const suffixes = ["+", "+", "+", "+"];
-
-            statValRefs.current.forEach((el, idx) => {
-              if (el && numericalValues[idx] !== undefined) {
-                animateCounter(el, numericalValues[idx], "", suffixes[idx], 1600 + idx * 200);
+            // Animate number counters dynamically from portfolioData.stats
+            portfolioData.stats.forEach((stat, idx) => {
+              const el = statValRefs.current[idx];
+              if (el) {
+                animateCounter(
+                  el,
+                  stat.numericValue,
+                  "",
+                  stat.suffix,
+                  1400 + idx * 150
+                );
               }
             });
 

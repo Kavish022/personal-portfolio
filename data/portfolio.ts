@@ -8,6 +8,8 @@ export interface SocialLink {
 export interface QuickStat {
   label: string;
   value: string;
+  numericValue: number;
+  suffix: string;
   detail: string;
 }
 
@@ -81,22 +83,30 @@ export const portfolioData: PersonalInfo = {
     {
       label: "Years of Experience",
       value: "1+",
-      detail: "Building production software",
+      numericValue: 1,
+      suffix: "+",
+      detail: "Full stack at Webanix",
     },
     {
-      label: "Production Systems",
+      label: "Production Projects",
       value: "3+",
-      detail: "Enterprise OMS, HRMS & Portals",
+      numericValue: 3,
+      suffix: "+",
+      detail: "B2B OMS, HRMS & Portal",
     },
     {
-      label: "Technologies Mastered",
-      value: "6+",
-      detail: "React, Angular, Node & SQL",
+      label: "Core Technologies",
+      value: "10+",
+      numericValue: 10,
+      suffix: "+",
+      detail: "React, Angular, Node, SQL",
     },
     {
-      label: "REST APIs Engineered",
-      value: "13+",
-      detail: "Layered CRUD & microservices",
+      label: "REST Endpoints & Modules",
+      value: "25+",
+      numericValue: 25,
+      suffix: "+",
+      detail: "Layered CRUD & services",
     },
   ],
   socials: [
